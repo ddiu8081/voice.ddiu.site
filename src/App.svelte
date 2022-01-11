@@ -30,7 +30,7 @@
       <div
         class="flex py-4 px-4 -mx-4 my-2 rounded-lg gap-4 md:hover:bg-slate-100"
       >
-        <Icon class="text-3xl opacity-80" icon="twemoji:keycap-1" />
+        <Icon class="shrink-0 text-2xl md:text-3xl opacity-80" icon="twemoji:keycap-1" />
         <div class="my-0.5">
           <div>下载 TeamSpeak 客户端。</div>
           <div class="mt-3">
@@ -48,7 +48,7 @@
       <div
         class="flex py-3 px-4 -mx-4 my-2 rounded-lg gap-4 md:hover:bg-slate-100"
       >
-        <Icon class="text-3xl opacity-80" icon="twemoji:keycap-2" />
+        <Icon class="shrink-0 text-2xl md:text-3xl opacity-80" icon="twemoji:keycap-2" />
         <div class="my-0.5">
           添加一个新的服务器，服务器地址填写上方内容并建立连接。
         </div>
@@ -56,7 +56,7 @@
       <div
         class="flex py-3 px-4 -mx-4 my-2 rounded-lg gap-4 md:hover:bg-slate-100"
       >
-        <Icon class="text-3xl opacity-80" icon="twemoji:keycap-3" />
+        <Icon class="shrink-0 text-2xl md:text-3xl opacity-80" icon="twemoji:keycap-3" />
         <div class="my-0.5">
           编辑您自己的昵称，昵称将在整个服务器内可见。
         </div>
@@ -64,7 +64,7 @@
       <div
         class="flex py-3 px-4 -mx-4 my-2 rounded-lg gap-4 md:hover:bg-slate-100"
       >
-        <Icon class="text-3xl opacity-80" icon="twemoji:keycap-4" />
+        <Icon class="shrink-0 text-2xl md:text-3xl opacity-80" icon="twemoji:keycap-4" />
         <div class="my-0.5">
           选择一个房间，开始语音聊天。
         </div>

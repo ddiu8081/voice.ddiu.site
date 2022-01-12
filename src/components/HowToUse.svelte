@@ -5,7 +5,9 @@
 
   import Download from './Download.svelte'
 
+  export let serverName
   let showDownloadPanel = false
+  const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent)
 </script>
 
 <div class="my-8">
@@ -31,14 +33,16 @@
           </a>
           <button
             class="inline-flex items-center mr-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none"
-            on:click={() => { showDownloadPanel = !showDownloadPanel }}
+            on:click={() => {
+              showDownloadPanel = !showDownloadPanel
+            }}
           >
             <Icon class="mr-1" icon="octicon:inbox-16" />
             本站转存地址
           </button>
         </div>
         {#if showDownloadPanel}
-          <div transition:fade="{{duration: 300, easing: cubicInOut }}">
+          <div transition:fade={{ duration: 300, easing: cubicInOut }}>
             <Download />
           </div>
         {/if}
@@ -50,7 +54,18 @@
         icon="twemoji:keycap-2"
       />
       <div class="my-0.5">
-        添加一个新的服务器，服务器地址填写上方内容并建立连接。
+        <div>添加一个新的服务器，服务器地址填写上方内容并建立连接。</div>
+        {#if !isMobile}
+          <div class="mt-3">如果你的客户端版本是 3.x 版本，也可以：</div>
+          <div class="mt-3">
+            <a
+              href={`ts3server://${serverName}`}
+              class="inline-flex items-center mr-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none"
+            >
+              3.x 客户端直连
+            </a>
+          </div>
+        {/if}
       </div>
     </div>
     <div class="flex py-3 px-4 -mx-4 my-2 rounded-lg md:hover:bg-slate-50">
